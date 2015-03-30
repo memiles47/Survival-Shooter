@@ -17,7 +17,6 @@ public class EnemyHealth : MonoBehaviour
     private bool isDead;
     private bool isSinking;
 
-
     void Awake ()
     {
         anim = GetComponent <Animator> ();
@@ -28,7 +27,6 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-
     void Update ()
     {
         if(isSinking)
@@ -36,7 +34,6 @@ public class EnemyHealth : MonoBehaviour
             transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
         }
     }
-
 
     public void TakeDamage (int amount, Vector3 hitPoint)
     {
@@ -56,7 +53,6 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-
     void Death ()
     {
         isDead = true;
@@ -68,7 +64,6 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.clip = deathClip;
         enemyAudio.Play ();
     }
-
 
     public void StartSinking ()
     {

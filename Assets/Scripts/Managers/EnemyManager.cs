@@ -2,11 +2,13 @@
 
 public class EnemyManager : MonoBehaviour
 {
+    // Declaration of Public variables
     public PlayerHealth playerHealth;
     public GameObject enemy;
-    public float spawnTime = 3f;
+    public float spawnTime = 3.0f;
     public Transform[] spawnPoints;
 
+    // Declaration of Private variables
 
     void Start ()
     {
@@ -16,7 +18,7 @@ public class EnemyManager : MonoBehaviour
 
     void Spawn ()
     {
-        if(playerHealth.currentHealth <= 0f)
+        if(playerHealth.currentHealth <= 0.0f)
         {
             return;
         }
