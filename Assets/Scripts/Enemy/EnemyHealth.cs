@@ -2,19 +2,20 @@
 
 public class EnemyHealth : MonoBehaviour
 {
+    // Declaration of Public variables
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
     public AudioClip deathClip;
 
-
-    Animator anim;
-    AudioSource enemyAudio;
-    ParticleSystem hitParticles;
-    CapsuleCollider capsuleCollider;
-    bool isDead;
-    bool isSinking;
+    // Declaration of Private variables
+    private Animator anim;
+    private AudioSource enemyAudio;
+    private ParticleSystem hitParticles;
+    private CapsuleCollider capsuleCollider;
+    private bool isDead;
+    private bool isSinking;
 
 
     void Awake ()
@@ -74,7 +75,7 @@ public class EnemyHealth : MonoBehaviour
         GetComponent <NavMeshAgent> ().enabled = false;
         GetComponent <Rigidbody> ().isKinematic = true;
         isSinking = true;
-        //ScoreManager.score += scoreValue;
-        Destroy (gameObject, 2f);
+        ScoreManager.score += scoreValue;
+        Destroy (gameObject, 2.0f);
     }
 }

@@ -4,8 +4,10 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
+    // Declaration of Public variables
     public static int score;
 
+    // Declaration of Private variables
 
     Text text;
 

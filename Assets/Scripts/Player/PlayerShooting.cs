@@ -2,20 +2,21 @@
 
 public class PlayerShooting : MonoBehaviour
 {
+    // Declaration of Public variables
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
-    public float range = 100f;
+    public float range = 100.0f;
 
-
-    float timer;
-    Ray shootRay;
-    RaycastHit shootHit;
-    int shootableMask;
-    ParticleSystem gunParticles;
-    LineRenderer gunLine;
-    AudioSource gunAudio;
-    Light gunLight;
-    float effectsDisplayTime = 0.2f;
+    // Declaration of Private variables
+    private float timer;
+    private Ray shootRay;
+    private RaycastHit shootHit;
+    private int shootableMask;
+    private ParticleSystem gunParticles;
+    private LineRenderer gunLine;
+    private AudioSource gunAudio;
+    private Light gunLight;
+    private float effectsDisplayTime = 0.2f;
 
 
     void Awake ()
@@ -53,7 +54,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot ()
     {
-        timer = 0f;
+        timer = 0.0f;
 
         gunAudio.Play ();
 
