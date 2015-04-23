@@ -8,8 +8,7 @@ public class ScoreManager : MonoBehaviour
     public static int score;
 
     // Declaration of Private variables
-
-    Text text;
+    private Text text;
 
 
     void Awake ()
